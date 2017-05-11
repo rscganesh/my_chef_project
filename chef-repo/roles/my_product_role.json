@@ -1,0 +1,27 @@
+{
+  "name": "my_product_role",
+  "description": "My Role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "my_tomcat_cookbook": {
+      "catalina_port": "19999",
+      "catalina_redirect": "28443"
+    }
+  },
+  "override_attributes": {
+    "my_tomcat_cookbook": {
+      "catalina_port": "78999999999999",
+      "catalina_redirect": "78443999999999"
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[my_project_java]",
+    "recipe[my_project_oracle]",
+    "recipe[my_project_weblogic]",
+    "recipe[my_tomcat_cookbook]"
+  ],
+  "env_run_lists": {
+
+  }
+}

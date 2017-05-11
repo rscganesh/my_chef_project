@@ -1,0 +1,23 @@
+{
+  "name": "my_env_role",
+  "description": "My Env Role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "my_env_cookbook": {
+      "port": "99999999999999999999999999999999"
+    }
+  },
+  "override_attributes": {
+    "my_env_cookbook": {
+      "port": "role_override11111111111111111111"
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[my_env_cookbook]"
+  ],
+  "env_run_lists": {
+ 	"prod" : ["recipe[my_prod_cookbook]"],
+    "dev": ["recipe[my_dev_cookbook]"]
+  }
+}
